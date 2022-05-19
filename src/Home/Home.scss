@@ -1,0 +1,35 @@
+.flex{
+
+    display: flex;
+}
+
+.flex-col {
+
+    flex-direction: column;
+}
+
+.flex-wrap{
+
+flex-wrap: wrap;
+}
+
+.space-center {
+
+    justify-content: center;
+    }
+
+    .align-center{
+
+        align-items: center;
+    }
+
+    .home{
+            &-container{
+            &-heading{
+
+            }
+            &-list{
+                gap:2rem;
+            }
+          }
+       }
