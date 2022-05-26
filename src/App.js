@@ -8,11 +8,13 @@ function App() {
      <BrowserRouter>
     <Routes>
     <Route path="/" element={<Home/>} />
-    <Route exact path="/user/:username" element={<UserDetail/>} />
-   </Routes>
+    <Route exact path="/user/:username" element={<UserDetail/>} />              
+   </Routes> 
    </BrowserRouter>
   </>
   );
  }
 
 export default App;
+// exact is used here to avoid similar link being called if starting initials are same eg user and usernames
+//and : is used for dynamic part

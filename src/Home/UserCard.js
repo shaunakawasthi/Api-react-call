@@ -16,31 +16,33 @@ const bull = (
     
   </Box>
 );
-
-export default function UserCard(props) {
+//here we have changed props.item to item , shortcut discussed with arpit, same effect as props.item
+export default function UserCard({item}) {
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-         Full Name: {props.item.name}
+         Full Name: {item.name}
         </Typography>
         <Typography variant="h5" component="div">
-         User Name: {props.item.username}
+         User Name: {item.username}
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          Email : {props.item.email}
+          Email : {item.email}
         </Typography>
         <Typography variant="body2">
-          Phone: {props.item.phone}
+          Phone: {item.phone}
           <br />
           {'"a benevolent smile"'}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small"><Link to= {'/user/${props.item.username}'}
-        state={{userData: props.item}}>Learn more </Link>
+        <Link to= {`/user/${item.username}`}               // link to userdetails , data stored in user data and check userdetails code
+        state={{userData: item}}
+        ><div>learn more</div></Link> 
         
-        </Button>
+        
+        
       </CardActions>
     </Card>
   );

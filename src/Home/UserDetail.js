@@ -1,5 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import { useLocation } from 'react-router-dom'
+import "./Home.scss"
+import GoogleMapReact from 'google-map-react'
 
 
 const UserDetail = (props) => {
@@ -7,21 +9,21 @@ const UserDetail = (props) => {
 
     const [userData , setUserData] = useState()
 
-    const location = useLocation()
+    const location = useLocation()     //part of react router dom
 
 
     useEffect (() => {
 
 if(location.state) {
-setUserData(location.state.userData)
+setUserData(location.state.userData)    // state updated in usercard 
 }
 
 }, [])
 
 
 return (
-    <div className="User-detail">
-    <div className="user-detail-conatiner">
+    <div className="user-detail">
+    <div className="user-detail-container">
     <div className="user-detail-container-inner flex flex-col">
   {
       userData && <>
@@ -50,12 +52,27 @@ return (
        </div>
 
        <div>
-         Address : <b>{userData.address.street}</b>
+         Address : <b>{userData.address.street} {userData.address.suite}</b>
        </div>
 
        <div>
          Company Name : <b>{userData.company.name}</b>
        </div>
+       {/* <div style={{ height: '100vh', width: '100%' }}>
+                            <GoogleMapReact
+                                bootstrapURLKeys={{ key: "AIzaSyAuLX_FvVVgOyzOcvz9tbKdsoQ814Cs8Dk" }}
+                                defaultCenter={defaultProps.center}
+                                defaultZoom={defaultProps.zoom}
+                            >
+                                <AnyReactComponent
+                                lat={59.955413}
+                                lng={30.337844}
+                                text="My Marker"
+                                />
+                                </GoogleMapReact>
+                    </div> */}
+
+
           </>
   }
         </div>
