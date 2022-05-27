@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation , Link } from 'react-router-dom'
 import "./Home.scss"
 import GoogleMapReact from 'google-map-react'
 
@@ -52,8 +52,13 @@ return (
        </div>
 
        <div>
-         Address : <b>{userData.address.street} {userData.address.suite}</b>
-       </div>
+         Full Address : <b>
+         <Link to ={`/${userData.address.city}/detail`}  
+         state={{cityName: userData.address.city}} >               
+          {userData.address.street} {userData.address.suite} 
+          </Link>
+          </b>
+         </div>
 
        <div>
          Company Name : <b>{userData.company.name}</b>
