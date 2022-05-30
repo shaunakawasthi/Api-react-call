@@ -55,7 +55,7 @@ return (
          Full Address : <b>
          <Link to ={`/${userData.address.city}/detail`}  
          state={{cityName: userData.address.city}} >               
-          {userData.address.street} {userData.address.suite} 
+          {userData.address.street} ,{userData.address.suite} ,{userData.address.city} 
           </Link>
           </b>
          </div>

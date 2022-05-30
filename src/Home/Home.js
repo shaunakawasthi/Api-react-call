@@ -2,9 +2,17 @@ import axios from 'axios';
 import React, {useEffect, useState } from 'react';
 import './Home.scss';
 import UserCard from './UserCard';
+import { ToastContainer, toast } from 'material-react-toastify';
+import 'material-react-toastify/dist/ReactToastify.css';
+import {Link } from 'react-router-dom' ;
+import { Button, ButtonGroup } from '@chakra-ui/react'
 
 const Home = () => {
 
+
+    
+        const notify = () => toast("Wow so easy !");  //toast snack bar
+    
     const  [userList, setUserList] = useState(); //state
     const [searchText , setSearchText] = useState();
     const [searchEmail ,setSearchEmail] = useState();
@@ -94,6 +102,13 @@ const Home = () => {
                <div> <input onChange={handleSearch1} className='input-search' type="search" placeholder="Type Email" id= 'search2' /></div>
                <div> <input onChange={handleSearch2} className='input-search' type="search" placeholder="Type phone-no" id= 'search3' /></div>
                <div> <input onChange={handleSearch3} className='input-search' type="search" placeholder="Type Full-Name" id= 'search4' /></div>
+               <Button colorScheme='teal' size='md'>
+   
+    <Link to = "/user/create">  Add Data</Link></Button> 
+               <div>
+        <button onClick={notify}>Notify !</button>
+        <ToastContainer />
+      </div>
                </div>
                <div className="home-container-list flex flex-wrap" style={{gap: '2rem'}}>
                    {

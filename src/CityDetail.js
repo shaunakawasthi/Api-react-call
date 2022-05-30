@@ -2,7 +2,7 @@ import axios from 'axios'
 import React , { useState , useEffect } from 'react'
 import { useLocation , Link } from 'react-router'
 
-import React from 'react'
+
 
 const CityDetail = () => {
 
@@ -22,7 +22,7 @@ const CityDetail = () => {
 
 
     const fetchCityData = () => {
-       
+    
         cityName &&
         axios.get(``)
         .then( res => {
@@ -30,57 +30,15 @@ const CityDetail = () => {
                 setCityData(res)
                 console.log("city not found")
         })
-    }
+        .catch(err => 
+            {
+         console.log("Error" , err)
 
-
-        }
-
-
-
-
-        )
-
-
-
-    }
-
-
-
-    }
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-    return (
-
-
-
-
-
-
-
-
-
-
-
-
-    <div>CityDetail</div>
+            } )
+ }
+return (
+   <div>City Name : {cityName}</div>
   )
-}
 
+ }
 export default CityDetail

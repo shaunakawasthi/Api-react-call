@@ -70,5 +70,44 @@
 .inputt 
 {
 display: flex;
+align-items: center;
+}
+
+.input1 {
+
+ display: flex;
+ justify-content: space-between;
+ align-items: 100px;
+ 
+ background-color: azure ;
+
+padding: 20px;
+}
+
+.inputt2
+{
+
+  padding: 20px;
+}
+
+.userinput{
+
+  background-color: chocolate;
+}
+
+.userinput{
+
+
+  background-color: #CAD5E2;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.textfld{
+  background-color: aqua;
+
+  display: flex;
+  flex-direction: column;
 }
 
