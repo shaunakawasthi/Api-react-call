@@ -14,25 +14,37 @@ const UserInput = () => {
     const [phone ,setPhone] = useState();
 
 
-  const  hc1= (e) =>
+  const  handleName = (e) =>
     {
 setName(e.target.value)
     }
 
-    const hc2= (e) =>
+    const handleFullName = (e) =>
     {
 setFullName(e.target.value)
     }
 
-   const hc3= (e) =>
+   const handleAddress = (e) =>
     {
 setAddress(e.target.value)
     }
 
-    const hc4= (e) =>
+    const handlePhone= (e) =>
     {
 setPhone(e.target.value)
     }
+
+    const handleEmail= (e) =>
+    {
+setPhone(e.target.value)
+    }
+
+    const handleWebsite= (e) =>
+    {
+setPhone(e.target.value)
+    }
+
+
 
 
   return (
@@ -54,7 +66,7 @@ setPhone(e.target.value)
  <div className='textfld'>
      <TextField
           id="outlined-read-only-input" 
-          onChange={hc2} 
+          onChange={handleName} 
           label="User Name"
           defaultValue="    "
           placeholder='Enter User-Name'
@@ -64,7 +76,7 @@ setPhone(e.target.value)
 
             <TextField
           id="outlined-read-only-input" 
-          onChange={hc2} 
+          onChange={handleFullName} 
           label="Full Name"
           defaultValue="    "
           placeholder='Enter Full-Name'
@@ -74,7 +86,7 @@ setPhone(e.target.value)
 
             <TextField
           id="outlined-read-only-input" 
-          onChange={hc2} 
+          onChange={handleAddress} 
           label="Address"
           defaultValue="    "
           placeholder='Enter Address'
@@ -84,7 +96,7 @@ setPhone(e.target.value)
 
             <TextField
           id="outlined-read-only-input" 
-          onChange={hc2} 
+          onChange={handlePhone} 
           label="Phone"
           defaultValue="    "
           placeholder='Enter Phone-no'
@@ -95,10 +107,10 @@ setPhone(e.target.value)
 
 <TextField
           id="outlined-read-only-input" 
-          onChange={hc2} 
-          label="Phone"
+          onChange={handleEmail} 
+          label="email"
           defaultValue="    "
-          placeholder='Enter Phone-no'
+          placeholder='Enter email'
           InputProps={{
             
           }}
@@ -106,10 +118,10 @@ setPhone(e.target.value)
 
 <TextField
           id="outlined-read-only-input" 
-          onChange={hc2} 
-          label="Phone"
+          onChange={handleWebsite} 
+          label="Website"
           defaultValue="    "
-          placeholder='Enter Phone-no'
+          placeholder='website'
           InputProps={{
             
           }}
@@ -117,7 +129,7 @@ setPhone(e.target.value)
 
 <TextField
           id="outlined-read-only-input" 
-          onChange={hc2} 
+        //  onChange={hc2} 
           label="Phone"
           defaultValue="    "
           placeholder='Enter Phone-no'
